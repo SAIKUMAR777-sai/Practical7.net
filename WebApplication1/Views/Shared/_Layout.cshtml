@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="bg-primary text-white text-center p-3 mb-3">
+        <h3>Student Feedback Management System</h3>
+        <a class="text-white me-3" asp-controller="Feedback" asp-action="Index">Home</a>
+        <a class="text-white me-3" asp-controller="Feedback" asp-action="Create">Give Feedback</a>
+        <a class="text-white" asp-controller="Feedback" asp-action="List">Feedback List</a>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="border-top text-center text-muted p-3 mt-4">
+        &copy; 2026 - Student Feedback Management System - Marwadi University
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

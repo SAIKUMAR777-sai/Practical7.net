@@ -1,0 +1,18 @@
+﻿@model WebApplication1.Models.Feedback
+@{
+    ViewData["Title"] = "Create Feedback";
+}
+
+<h2>Create Student Feedback</h2>
+
+@using (Html.BeginForm("Create", "Feedback", FormMethod.Post))
+{
+    <partial name="_FeedbackForm" model="Model" />
+
+    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    @Html.ActionLink("Back", "Index", "Feedback", null, new { @class = "btn btn-secondary" })
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

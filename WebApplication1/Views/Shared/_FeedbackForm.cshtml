@@ -1,0 +1,29 @@
+﻿@model WebApplication1.Models.Feedback
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<div class="mb-3">
+    @Html.LabelFor(m => m.Enrollmentnum)
+    @Html.TextBoxFor(m => m.Enrollmentnum, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Enrollmentnum, "", new { @class = "text-danger" })
+</div>
+<div class="mb-3">
+    @Html.LabelFor(m => m.StudentName)
+    @Html.TextBoxFor(m => m.StudentName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.StudentName, "", new { @class = "text-danger" })
+</div>
+<div class="mb-3">
+    @Html.LabelFor(m => m.Subject)
+    @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })
+</div>
+<div class="mb-3">
+    @Html.LabelFor(m => m.Rating)
+    @Html.TextBoxFor(m => m.Rating, new { @class = "form-control", type = "number", min = "1", max = "5" })
+    @Html.ValidationMessageFor(m => m.Rating, "", new { @class = "text-danger" })
+</div>
+<div class="mb-3">
+    @Html.LabelFor(m => m.Comments)
+    @Html.TextAreaFor(m => m.Comments, new { @class = "form-control", rows = 4 })
+    @Html.ValidationMessageFor(m => m.Comments, "", new { @class = "text-danger" })
+</div>
